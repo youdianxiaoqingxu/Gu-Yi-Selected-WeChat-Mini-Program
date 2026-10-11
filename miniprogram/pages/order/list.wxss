@@ -1,0 +1,171 @@
+.order-list {
+  min-height: 100vh;
+  padding: 24rpx;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  height: 72rpx;
+  margin-bottom: 20rpx;
+  padding: 0 24rpx;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 36rpx;
+}
+
+.search-icon {
+  width: 32rpx;
+  height: 32rpx;
+  flex-shrink: 0;
+  margin-right: 12rpx;
+}
+
+.search-input {
+  flex: 1;
+  height: 72rpx;
+  font-size: 26rpx;
+  color: #2B211B;
+}
+
+.search-clear {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #A99A88;
+}
+
+.tabs {
+  display: flex;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.tab {
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #7C6854;
+}
+
+.tab.active {
+  color: #7D5233;
+  font-weight: 600;
+}
+
+.order-card {
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 8px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16rpx;
+  border-bottom: 1rpx solid #DDC6A5;
+}
+
+.order-no {
+  font-size: 24rpx;
+  color: #7C6854;
+}
+
+.status {
+  font-size: 26rpx;
+  color: #7D5233;
+}
+
+.goods {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+}
+
+.cover {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 8px;
+}
+
+.g-info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 16rpx;
+}
+
+.g-title {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 26rpx;
+  color: #2B211B;
+}
+
+.g-spec {
+  display: block;
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  color: #7C6854;
+}
+
+.g-price {
+  font-size: 24rpx;
+  color: #5A4330;
+}
+
+.card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 16rpx;
+  border-top: 1rpx solid #DDC6A5;
+}
+
+.amount {
+  margin-right: 20rpx;
+  font-size: 26rpx;
+  color: #2B211B;
+}
+
+.btns {
+  display: flex;
+}
+
+.btn {
+  margin: 0 0 0 12rpx;
+  padding: 0 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 6px;
+  font-size: 24rpx;
+  color: #2B211B;
+  background: #F3E6D2;
+}
+
+.btn::after {
+  border: none;
+}
+
+.btn.primary {
+  background: #7D5233;
+  color: #FFFDF7;
+}
+
+.empty-tip {
+  padding: 160rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #917A62;
+}

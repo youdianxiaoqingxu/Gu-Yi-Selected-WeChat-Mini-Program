@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的收藏",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "goods-card": "/components/goods-card/goods-card",
+    "empty": "/components/empty/empty"
+  }
+}

@@ -1,0 +1,106 @@
+.profile {
+  min-height: 100vh;
+  padding: 24rpx;
+}
+
+.section-title {
+  margin: 8rpx 0 16rpx;
+  font-size: 28rpx;
+  color: #917A62;
+}
+
+.group {
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 104rpx;
+  padding: 0 28rpx;
+  border-bottom: 1rpx solid #F0E5D2;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #2B211B;
+}
+
+.row-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.value {
+  font-size: 28rpx;
+  color: #7C6854;
+}
+
+.value.placeholder {
+  color: #B8A88F;
+}
+
+.input {
+  flex: 1;
+  text-align: right;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.arrow {
+  margin-left: 12rpx;
+  color: #C9B69C;
+  font-size: 32rpx;
+}
+
+.avatar-btn {
+  padding: 0;
+  margin: 0;
+  width: 88rpx;
+  height: 88rpx;
+  background: transparent;
+}
+
+.avatar-btn::after {
+  border: none;
+}
+
+.avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background: #F5E8D3;
+}
+
+.avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6D8065;
+  color: #FFFDF7;
+  font-size: 36rpx;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-left: 32rpx;
+  font-size: 28rpx;
+  color: #5A4330;
+}

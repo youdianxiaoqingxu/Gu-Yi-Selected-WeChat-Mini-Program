@@ -1,0 +1,19 @@
+<!-- 地址列表：选择模式用于订单确认，管理模式用于增删改与设默认 -->
+<view class="address-list">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <view class="addr-card" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="onTap">
+    <view class="head">
+      <text class="name">{{item.name}}</text>
+      <text class="phone">{{item.phone}}</text>
+      <text wx:if="{{item.isDefault === 1}}" class="default">默认</text>
+    </view>
+    <text class="full">{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</text>
+    <view class="ops" wx:if="{{!select}}">
+      <text class="op" data-id="{{item.id}}" catchtap="onSetDefault">设为默认</text>
+      <text class="op" data-id="{{item.id}}" catchtap="onEdit">编辑</text>
+      <text class="op danger" data-id="{{item.id}}" catchtap="onDelete">删除</text>
+    </view>
+  </view>
+
+  <button class="add-btn" bindtap="onAdd">新增地址</button>
+</view>

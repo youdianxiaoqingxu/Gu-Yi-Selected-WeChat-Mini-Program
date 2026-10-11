@@ -1,0 +1,48 @@
+.address-edit {
+  min-height: 100vh;
+  padding: 24rpx;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  min-height: 96rpx;
+  padding: 0 24rpx;
+  margin-bottom: 20rpx;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 8px;
+}
+
+.label {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #2B211B;
+}
+
+.input {
+  flex: 1;
+  height: 96rpx;
+  font-size: 28rpx;
+}
+
+.value {
+  flex: 1;
+  font-size: 28rpx;
+  color: #5A4330;
+}
+
+.save-btn {
+  margin-top: 40rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 8px;
+  background: #7D5233;
+  color: #FFFDF7;
+  font-size: 30rpx;
+}
+
+.save-btn::after {
+  border: none;
+}
+

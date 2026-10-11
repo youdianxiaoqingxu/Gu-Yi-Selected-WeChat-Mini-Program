@@ -1,0 +1,159 @@
+.confirm {
+  min-height: 100vh;
+  padding: 24rpx 24rpx 160rpx;
+}
+
+.addr,
+.remark {
+  padding: 28rpx;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 8px;
+  margin-bottom: 20rpx;
+}
+
+.addr-head {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2B211B;
+}
+
+.phone {
+  margin-left: 16rpx;
+  font-size: 26rpx;
+  color: #7C6854;
+}
+
+.full {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 26rpx;
+  color: #5A4330;
+}
+
+.addr-empty {
+  font-size: 28rpx;
+  color: #7D5233;
+}
+
+.goods-block {
+  margin-bottom: 20rpx;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.goods-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #DDC6A5;
+}
+
+.goods-item:last-child {
+  border-bottom: none;
+}
+
+.cover {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 8px;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  margin-left: 20rpx;
+}
+
+.title {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+  color: #2B211B;
+}
+
+.spec {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #7C6854;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price {
+  font-size: 28rpx;
+  color: #7D5233;
+}
+
+.qty {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #7C6854;
+}
+
+.remark {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  width: 120rpx;
+  font-size: 28rpx;
+  color: #2B211B;
+}
+
+.input {
+  flex: 1;
+  height: 56rpx;
+  font-size: 28rpx;
+}
+
+.bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24rpx;
+  background: #FFFDF7;
+  border-top: 1rpx solid #DDC6A5;
+}
+
+.total {
+  margin-right: 24rpx;
+  font-size: 30rpx;
+  color: #7D5233;
+}
+
+.submit {
+  margin: 0;
+  width: 240rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  border-radius: 8px;
+  background: #7D5233;
+  color: #FFFDF7;
+  font-size: 28rpx;
+}
+
+.submit::after {
+  border: none;
+}
+

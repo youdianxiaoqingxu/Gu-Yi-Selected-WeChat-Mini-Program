@@ -1,0 +1,134 @@
+.index {
+  min-height: 100vh;
+  padding: 15rpx;
+}
+
+.search-bar {
+  height: 70rpx;
+  padding: 0 25rpx;
+  display: flex;
+  align-items: center;
+  background: #FFFDF7;
+  border: 1rpx solid #C3A57F;
+  border-radius: 20rpx;
+}
+.search-icon {
+  width: 36rpx;
+  height: 36rpx;
+  flex-shrink: 0;
+  margin-right: 16rpx;
+}
+.search-placeholder {
+  font-size: 30rpx;
+  color: #917A62;
+}
+
+.video-wrap {
+  width: auto;
+  height: 400rpx;
+  margin: 10rpx -24rpx 0;
+  overflow: hidden;
+}
+
+.promo-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.video-tap-area {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 130rpx;
+  background: transparent;
+  z-index: 1;
+}
+
+.banner-swiper {
+  height: 400rpx;
+  margin-top: 20rpx;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.banner-item {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.category-grid {
+  margin-top: 24rpx;
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 8px;
+  padding: 24rpx 0;
+}
+
+.category-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14rpx 0;
+}
+
+.category-icon {
+  width: 128rpx;
+  height: 128rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-icon-img {
+  display: block;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 12rpx;
+}
+
+.category-icon-text {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5EAD8;
+  color: #7D5233;
+  font-size: 46rpx;
+}
+
+.category-name {
+  margin-top: 8rpx;
+  font-size: 26rpx;
+  color: #2B211B;
+}
+
+.section-title {
+  margin: 32rpx 0 20rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #2B211B;
+}
+
+.goods-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid-item {
+  width: 48.5%;
+  margin-bottom: 24rpx;
+}

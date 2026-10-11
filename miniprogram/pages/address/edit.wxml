@@ -1,0 +1,32 @@
+<!-- 地址编辑：新增与修改复用同一表单 -->
+<view class="address-edit">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <view class="form-item">
+    <text class="label">收货人</text>
+    <input class="input" value="{{name}}" bindinput="onName" placeholder="请输入姓名" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">手机号</text>
+    <input class="input" value="{{phone}}" bindinput="onPhone" placeholder="请输入手机号" />
+  </view>
+
+  <picker mode="region" bindchange="onRegion" value="{{region}}">
+    <view class="form-item">
+      <text class="label">所在地区</text>
+      <text class="value">{{province}}{{city}}{{district}}</text>
+    </view>
+  </picker>
+
+  <view class="form-item">
+    <text class="label">详细地址</text>
+    <input class="input" value="{{detail}}" bindinput="onDetail" placeholder="街道、门牌号" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">设为默认</text>
+    <switch checked="{{isDefault}}" bindchange="onDefault" />
+  </view>
+
+  <button class="save-btn" bindtap="save">保存</button>
+</view>

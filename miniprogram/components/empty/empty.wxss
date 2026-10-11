@@ -1,0 +1,12 @@
+.empty {
+  padding: 120rpx 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-text {
+  font-size: 26rpx;
+  color: #917A62;
+}
+

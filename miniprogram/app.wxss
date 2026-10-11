@@ -1,0 +1,33 @@
+page {
+  --color-primary: #7D5233;
+  --color-accent-green: #6D8065;
+  --color-accent-blue: #506B74;
+  --color-bg: #F5E8D3;
+  --color-text: #2B211B;
+  --color-text-secondary: #7C6854;
+  --color-border: #DDC6A5;
+  --color-danger: #B04A3A;
+
+  background: #F5E8D3;
+  color: #2B211B;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+view,
+text,
+image,
+button,
+input {
+  box-sizing: border-box;
+}
+
+.app-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}

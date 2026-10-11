@@ -1,0 +1,108 @@
+.mine {
+  min-height: 100vh;
+  padding: 24rpx;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 16rpx;
+  padding: 32rpx 28rpx;
+}
+
+.avatar-btn {
+  padding: 0;
+  margin: 0;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 1;
+  background: transparent;
+}
+
+.avatar-btn::after {
+  border: none;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: #F5E8D3;
+}
+
+.avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6D8065;
+  color: #FFFDF7;
+  font-size: 48rpx;
+}
+
+.profile-info {
+  flex: 1;
+  margin-left: 28rpx;
+}
+
+.nickname {
+  height: 52rpx;
+  line-height: 52rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #2B211B;
+}
+
+.hint {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #7C6854;
+}
+
+.login-entry {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.cell-group {
+  margin-top: 24rpx;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 28rpx;
+  font-size: 28rpx;
+  color: #2B211B;
+  border-bottom: 1rpx solid #DDC6A5;
+}
+
+.cell:last-child {
+  border-bottom: none;
+}
+
+.arrow {
+  color: #C9B69C;
+  font-size: 32rpx;
+}
+
+.logout {
+  margin-top: 32rpx;
+  height: 92rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFDF7;
+  border: 1rpx solid #E3D5BF;
+  border-radius: 16rpx;
+  color: #B04A3A;
+  font-size: 30rpx;
+}

@@ -1,0 +1,63 @@
+<!-- 商品详情：轮播 + 信息 + 规格 + 富文本 + 评价 + 底部操作栏 -->
+<view class="detail" wx:if="{{goods}}">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <swiper class="gallery" indicator-dots circular>
+    <swiper-item wx:for="{{goods.images}}" wx:key="*this">
+      <image class="gallery-img" src="{{item}}" mode="aspectFill" data-url="{{item}}" bindtap="previewImage" />
+    </swiper-item>
+  </swiper>
+
+  <view class="info">
+    <view class="price-row">
+      <text class="price">¥{{priceText}}</text>
+      <text wx:if="{{goods.originalPrice}}" class="original">¥{{originalText}}</text>
+    </view>
+    <text class="title">{{goods.title}}</text>
+    <text wx:if="{{goods.subtitle}}" class="subtitle">{{goods.subtitle}}</text>
+    <view class="tags">
+      <text wx:if="{{goods.craft}}" class="tag">{{goods.craft}}</text>
+      <text wx:if="{{goods.origin}}" class="tag">{{goods.origin}}</text>
+      <text wx:if="{{goods.material}}" class="tag">{{goods.material}}</text>
+    </view>
+  </view>
+
+  <view class="block" wx:if="{{goods.specs.length}}">
+    <view class="block-title">规格</view>
+    <view class="spec" wx:for="{{goods.specs}}" wx:key="id">
+      <text>{{item.specText}}</text>
+      <text class="spec-price">¥{{item.specPriceText}}</text>
+    </view>
+  </view>
+
+  <view class="block" wx:if="{{goods.detailHtml}}">
+    <view class="block-title">详情</view>
+    <rich-text nodes="{{goods.detailHtml}}" />
+  </view>
+
+  <view class="block" wx:if="{{goods.reviews.length}}">
+    <view class="block-title">评价</view>
+    <view class="review" wx:for="{{goods.reviews}}" wx:key="index">
+      <view class="review-head">
+        <text class="review-nick">{{item.nickname || '匿名用户'}}</text>
+        <text class="review-rating">{{item.rating}}分</text>
+      </view>
+      <text class="review-content">{{item.content}}</text>
+    </view>
+  </view>
+
+  <view class="action-bar">
+    <button class="action-item" open-type="contact">
+      <image class="action-icon" src="/static/detail/service.svg" mode="aspectFit" />
+      <text class="action-label">咨询</text>
+    </button>
+    <view class="action-item" bindtap="onFavorite">
+      <image class="action-icon" src="{{goods.favorite ? '/static/detail/star-active.svg' : '/static/detail/star.svg'}}" mode="aspectFit" />
+      <text class="action-label {{goods.favorite ? 'active' : ''}}">收藏</text>
+    </view>
+    <view class="action-item" bindtap="onAddCart">
+      <image class="action-icon" src="/static/detail/cart.svg" mode="aspectFit" />
+      <text class="action-label">购物车</text>
+    </view>
+    <view class="buy-btn" bindtap="onBuyNow">立即购买</view>
+  </view>
+</view>

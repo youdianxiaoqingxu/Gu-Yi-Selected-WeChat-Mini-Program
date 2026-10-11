@@ -1,0 +1,66 @@
+<!-- 首页：搜索框 + 宣传视频 + 轮播 + 分类入口 + 商品瀑布流 -->
+<view class="index">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <view class="search-bar" bindtap="goSearch">
+  <image class="search-icon" src="/static/sousuokuang/search-icon.svg" mode="aspectFit"></image>
+    <text class="search-placeholder">非遗手工艺品</text>
+  </view>
+  <view wx:if="{{video && !videoError}}" class="video-wrap">
+    <video
+      id="promoVideo"
+      class="promo-video"
+      src="{{video.url}}"
+      poster="{{video.coverImg}}"
+      autoplay
+      muted
+      loop
+      controls="{{true}}"
+      show-progress="{{false}}"
+      show-play-btn="{{true}}"
+      show-center-play-btn="{{false}}"
+      show-fullscreen-btn="{{false}}"
+      show-mute-btn="{{true}}"
+      show-background-playback-button="{{false}}"
+      show-casting-button="{{false}}"
+      object-fit="cover"
+      bindplay="onVideoPlay"
+      bindpause="onVideoPause"
+      binderror="onVideoError"
+    >
+      <cover-view class="video-tap-area" bindtap="onVideoTap"></cover-view>
+    </video>
+  </view>
+  <view wx:elif="{{video}}" class="video-wrap">
+    <image class="promo-video" src="{{video.coverImg}}" mode="aspectFill" />
+  </view>
+
+  <swiper wx:if="{{banners.length}}" class="banner-swiper" indicator-dots autoplay circular>
+    <swiper-item class="banner-item" wx:for="{{banners}}" wx:key="linkId">
+      <image
+        class="banner-img"
+        src="{{item.image}}"
+        mode="aspectFill"
+        data-type="{{item.linkType}}"
+        data-id="{{item.linkId}}"
+        bindtap="onBannerTap"
+      />
+    </swiper-item>
+  </swiper>
+
+  <view class="category-grid">
+    <view class="category-item" wx:for="{{categories}}" wx:key="id" data-id="{{item.id}}" bindtap="onCategoryTap">
+      <view class="category-icon">
+        <image wx:if="{{item.iconImage}}" class="category-icon-img" src="{{item.iconImage}}" mode="aspectFit" />
+        <text wx:else class="category-icon-text">{{item.firstChar}}</text>
+      </view>
+      <text class="category-name">{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="section-title">甄选好物</view>
+  <view class="goods-grid">
+    <view class="grid-item" wx:for="{{hotGoods}}" wx:key="id">
+      <goods-card goods="{{item}}" />
+    </view>
+  </view>
+</view>

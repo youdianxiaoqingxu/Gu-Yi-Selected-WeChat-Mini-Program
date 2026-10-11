@@ -1,0 +1,47 @@
+<!-- 分类页：左侧一级分类，右侧搜索 + 排序 + 商品列表 -->
+<view class="category">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <view class="search-bar" bindtap="goSearch">
+    <image class="search-icon" src="/static/sousuokuang/search-icon.svg" mode="aspectFit" />
+    <text class="search-placeholder">搜索商品</text>
+  </view>
+
+  <view class="body">
+    <scroll-view class="left" scroll-y>
+      <view
+        class="left-item {{item.id === currentCategoryId ? 'active' : ''}}"
+        wx:for="{{categories}}"
+        wx:key="id"
+        data-id="{{item.id}}"
+        bindtap="onCategoryTap"
+      >{{item.name}}</view>
+    </scroll-view>
+
+    <scroll-view class="right" scroll-y bindscrolltolower="onLoadMore">
+      <view class="sort-bar">
+        <text class="sort-item {{sort === 'comprehensive' ? 'active' : ''}}" data-sort="comprehensive" bindtap="onSortTap">综合</text>
+        <text class="sort-item {{sort === 'sales' ? 'active' : ''}}" data-sort="sales" bindtap="onSortTap">销量</text>
+        <text class="sort-item {{sort === 'price_asc' ? 'active' : ''}}" data-sort="price_asc" bindtap="onSortTap">价格升</text>
+        <text class="sort-item {{sort === 'price_desc' ? 'active' : ''}}" data-sort="price_desc" bindtap="onSortTap">价格降</text>
+        <text class="sort-item {{sort === 'new' ? 'active' : ''}}" data-sort="new" bindtap="onSortTap">最新</text>
+      </view>
+
+      <view wx:if="{{goods.length}}" class="goods-list">
+        <view class="goods-row" wx:for="{{goods}}" wx:key="id" data-id="{{item.id}}" bindtap="onGoodsTap">
+          <image class="goods-cover" src="{{item.coverImg}}" mode="aspectFill" />
+          <view class="goods-info">
+            <text class="goods-title">{{item.title}}</text>
+            <text wx:if="{{item.subtitle}}" class="goods-subtitle">{{item.subtitle}}</text>
+            <view class="goods-foot">
+            <view class="goods-price-box">
+              <text class="goods-price">¥{{item.priceText}}</text>
+            </view>
+              <view class="buy-btn" catchtap="onGoodsTap" data-id="{{item.id}}">购买</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <empty wx:else text="该分类暂无商品" />
+    </scroll-view>
+  </view>
+</view>

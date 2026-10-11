@@ -1,0 +1,34 @@
+<view class="mine">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <view class="profile-card">
+    <block wx:if="{{loggedIn}}">
+      <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+        <image wx:if="{{userInfo.avatarUrl}}" class="avatar" src="{{avatarDisplay}}" mode="aspectFill" />
+        <view wx:else class="avatar avatar-fallback">{{nicknameFirst}}</view>
+      </button>
+      <view class="profile-info">
+        <input class="nickname" type="nickname" value="{{userInfo.nickname}}" bindblur="onNicknameBlur" placeholder="请输入昵称" />
+        <text class="hint">点击头像可更换</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="login-entry" bindtap="goLogin">
+        <view class="avatar avatar-fallback">艺</view>
+        <view class="profile-info">
+          <text class="nickname">点击登录</text>
+          <text class="hint">登录后完善头像与昵称</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="cell-group">
+    <view class="cell" bindtap="goOrders">我的订单<text class="arrow">›</text></view>
+    <view class="cell" bindtap="goFavorite">我的收藏<text class="arrow">›</text></view>
+    <view class="cell" bindtap="goAddress">收货地址<text class="arrow">›</text></view>
+    <view class="cell" bindtap="goProfile">个人信息<text class="arrow">›</text></view>
+    <view class="cell" bindtap="goAbout">关于与客服<text class="arrow">›</text></view>
+  </view>
+
+  <view wx:if="{{loggedIn}}" class="logout" bindtap="onLogout">退出登录</view>
+</view>

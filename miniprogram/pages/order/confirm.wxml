@@ -1,0 +1,38 @@
+<!-- 确认订单：收货地址 + 商品清单 + 备注 + 提交 -->
+<view class="confirm">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <view class="addr" bindtap="chooseAddress">
+    <block wx:if="{{address}}">
+      <view class="addr-head">
+        <text class="name">{{address.name}}</text>
+        <text class="phone">{{address.phone}}</text>
+      </view>
+      <text class="full">{{address.province}}{{address.city}}{{address.district}}{{address.detail}}</text>
+    </block>
+    <text wx:else class="addr-empty">请选择收货地址</text>
+  </view>
+
+  <view class="goods-block" wx:if="{{preview}}">
+    <view class="goods-item" wx:for="{{preview.items}}" wx:key="goodsId">
+      <image class="cover" src="{{item.coverImg}}" mode="aspectFill" />
+      <view class="info">
+        <text class="title">{{item.goodsTitle}}</text>
+        <text class="spec">{{item.specText}}</text>
+      </view>
+      <view class="right">
+        <text class="price">¥{{item.price}}</text>
+        <text class="qty">x{{item.quantity}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="remark">
+    <text class="label">备注</text>
+    <input class="input" value="{{remark}}" bindinput="onRemark" placeholder="选填，给卖家留言" />
+  </view>
+
+  <view class="bottom">
+    <view class="total">合计：¥{{payText}}</view>
+    <button class="submit" bindtap="submit">提交订单</button>
+  </view>
+</view>

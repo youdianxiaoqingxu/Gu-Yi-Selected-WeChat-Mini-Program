@@ -1,0 +1,16 @@
+<view class="login">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+
+  <view class="brand">
+    <image class="logo" src="/static/logo.png" mode="aspectFit" />
+    <text class="title">古艺手作甄选</text>
+    <text class="subtitle">甄选指尖古艺，共赏人间匠心</text>
+  </view>
+
+  <view class="actions">
+    <button class="primary-btn" bindtap="onLogin">
+      <text class="primary-btn-text">微信一键登录</text>
+    </button>
+    <text class="tips">登录即代表同意相关服务协议与隐私政策</text>
+  </view>
+</view>

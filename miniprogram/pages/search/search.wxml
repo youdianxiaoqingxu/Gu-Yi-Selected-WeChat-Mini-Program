@@ -1,0 +1,34 @@
+<!-- 搜索页：搜索框 + 历史词 + 结果列表 -->
+<view class="search">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <view class="search-bar">
+    <input
+      class="search-input"
+      placeholder="搜索手工艺品"
+      value="{{keyword}}"
+      confirm-type="search"
+      bindinput="onInput"
+      bindconfirm="onSearch"
+    />
+    <text class="search-btn" bindtap="onSearch">搜索</text>
+  </view>
+
+  <block wx:if="{{!searched}}">
+    <view class="block-title">搜索历史</view>
+    <view wx:if="{{history.length}}" class="history">
+      <view class="history-item" wx:for="{{history}}" wx:key="*this" data-k="{{item}}" bindtap="onHistoryTap">{{item}}</view>
+      <text class="clear" bindtap="clearHistory">清空</text>
+    </view>
+    <empty wx:else text="暂无搜索历史" />
+  </block>
+
+  <block wx:else>
+    <view class="block-title">搜索结果</view>
+    <view wx:if="{{goods.length}}" class="goods-grid">
+      <view class="grid-item" wx:for="{{goods}}" wx:key="id">
+        <goods-card goods="{{item}}" />
+      </view>
+    </view>
+    <empty wx:else text="没有找到相关商品" />
+  </block>
+</view>

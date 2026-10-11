@@ -1,0 +1,75 @@
+.address-list {
+  min-height: 100vh;
+  padding: 24rpx;
+}
+
+.addr-card {
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+  background: #FFFDF7;
+  border: 1rpx solid #DDC6A5;
+  border-radius: 8px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2B211B;
+}
+
+.phone {
+  margin-left: 16rpx;
+  font-size: 26rpx;
+  color: #7C6854;
+}
+
+.default {
+  margin-left: 16rpx;
+  padding: 2rpx 12rpx;
+  border-radius: 6px;
+  background: #F0DFC5;
+  color: #7D5233;
+  font-size: 22rpx;
+}
+
+.full {
+  display: block;
+  margin-top: 14rpx;
+  font-size: 26rpx;
+  color: #5A4330;
+}
+
+.ops {
+  margin-top: 18rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.op {
+  margin-left: 28rpx;
+  font-size: 24rpx;
+  color: #7C6854;
+}
+
+.op.danger {
+  color: #B04A3A;
+}
+
+.add-btn {
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 8px;
+  background: #7D5233;
+  color: #FFFDF7;
+  font-size: 30rpx;
+}
+
+.add-btn::after {
+  border: none;
+}
+

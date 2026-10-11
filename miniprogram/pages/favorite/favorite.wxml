@@ -1,0 +1,11 @@
+<!-- 收藏列表：复用商品卡片，并提供取消收藏入口 -->
+<view class="favorite">
+  <image class="app-bg" src="/static/bg/app-bg.jpg" mode="aspectFill" />
+  <view wx:if="{{list.length}}" class="goods-grid">
+    <view class="grid-item" wx:for="{{list}}" wx:key="goodsId">
+      <goods-card goods="{{item}}" />
+      <text class="unfav" data-id="{{item.goodsId}}" catchtap="onRemove">取消收藏</text>
+    </view>
+  </view>
+  <empty wx:else text="暂无收藏" />
+</view>
